@@ -30,7 +30,7 @@ class ATM:
             print("Main menu:")
             print('\n'.join([f'{i:10}{label:>30}' for i, label in enumerate(self._menu, start=1)]))
 
-        def print_text(self, text):
+        def print_text(self, text) -> None:
             print(text)
 
         def choose(self) -> str:
@@ -79,7 +79,7 @@ class ATM:
     def get_money_rest(self) -> Decimal:
         return self._account_sum
 
-    def put(self):
+    def put(self) -> None:
         self.display.print_text('Input amount of money to put: ')
         sum_to_put = self.display.get_amount()
         self._account_sum += sum_to_put
@@ -90,7 +90,7 @@ class ATM:
             self._account_sum += self._account_sum * self.REFINANCE_RATE
             self.operation_count = 0
 
-    def take(self):
+    def take(self) -> None:
         self.display.print_text('Input amount of money to take: ')
         sum_to_take = self.display.get_amount()
         if self.get_money_rest() < sum_to_take:
@@ -104,14 +104,14 @@ class ATM:
                 self._account_sum += self._account_sum * self.REFINANCE_RATE
                 self.operation_count = 0
 
-    def check(self):
+    def check(self) -> None:
         self.display.print_text('Rest money on account:')
         self.display.print_text(self.get_money_rest())
         self.operation_count += 1
         if self.TAX_LOWER_LIM < self._account_sum < self.TAX_UPPER_LIM:
             self._account_sum -= self._account_sum * self.TAX_STANDARD
 
-    def work(self):
+    def work(self) -> None:
         while True:
             self.display.print_menu()
             match self.display.choose():
