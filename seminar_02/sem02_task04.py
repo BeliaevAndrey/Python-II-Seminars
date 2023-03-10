@@ -1,7 +1,6 @@
-from decimal import Decimal, InvalidOperation
-import decimal
+from decimal import Decimal, InvalidOperation, getcontext
 from math import pi
-decimal.getcontext().prec = 42
+getcontext().prec = 42
 PI = Decimal(pi)
 
 
