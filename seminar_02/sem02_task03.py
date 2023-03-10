@@ -1,6 +1,7 @@
 BIN_CONST = 2
 OCT_CONST = 8
 HEX_CONST = 16
+HEX_ALPHA = '0123456789abcdef'
 
 
 def get_bin(num):
@@ -22,7 +23,7 @@ def get_oct(num):
 def get_hex(num):
     out_str = ""
     while num > 0:
-        out_str = str(num % HEX_CONST) + out_str
+        out_str = HEX_ALPHA[num % HEX_CONST] + out_str
         num //= HEX_CONST
     return '0x' + out_str
 
