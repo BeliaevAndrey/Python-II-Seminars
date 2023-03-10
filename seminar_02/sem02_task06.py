@@ -89,6 +89,7 @@ class ATM:
         if self.operation_count > 3:
             self._account_sum += self._account_sum * self.REFINANCE_RATE
             self.operation_count = 0
+        self.check()
 
     def take(self) -> None:
         self.display.print_text('Input amount of money to take: ')
@@ -103,11 +104,14 @@ class ATM:
             if self.operation_count > 3:
                 self._account_sum += self._account_sum * self.REFINANCE_RATE
                 self.operation_count = 0
+        self.check()
 
     def check(self) -> None:
         self.display.print_text('Rest money on account:')
         self.display.print_text(self.get_money_rest())
-        self.operation_count += 1
+
+    def check_operation(self) -> None:
+        self.check()
         if self.TAX_LOWER_LIM < self._account_sum < self.TAX_UPPER_LIM:
             self._account_sum -= self._account_sum * self.TAX_STANDARD
 
