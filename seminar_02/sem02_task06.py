@@ -11,8 +11,6 @@ from decimal import Decimal
 
 
 class ATM:
-    _ACTIONS: tuple = ('TAKE', 'PUT', 'CHECK', 'EXIT')
-
     class Display:
         _GREETING = '''
          WELCOME! DIY ATM greets You.
@@ -63,6 +61,7 @@ class ATM:
                 else:
                     print('Amount is not multiple of 50.00 units')
 
+    _ACTIONS: tuple = ('TAKE', 'PUT', 'CHECK', 'EXIT')
     _account_sum: Decimal = 0
     TAX_STANDARD: Decimal = Decimal(0.015)
     REFINANCE_RATE: Decimal = Decimal(0.03)
