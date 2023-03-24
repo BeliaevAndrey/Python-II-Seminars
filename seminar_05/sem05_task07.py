@@ -47,15 +47,6 @@ def main1():
 
 
 def gen_primes(amount):
-    # def is_prime(num):
-    #     if num <= 2:
-    #         return True
-    #     if not num % 2:
-    #         return False
-    #     for div in range(3, int(num ** 0.5) + 1, 2):
-    #         if not num % div:
-    #             return False
-    #     return True
     def is_prime(low_lim, hi_lim, num):
         if num in (i for i in range(low_lim, hi_lim)
                    if i == 2 or (i % 2 and all(i % div for div in range(3, int(i ** 0.5) + 1, 2)))):
