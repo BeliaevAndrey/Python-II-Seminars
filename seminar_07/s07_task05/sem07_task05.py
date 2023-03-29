@@ -43,6 +43,14 @@ def main():
     creator_m(new_exts_1)
     # new_exts_2 = ['ex10', 'ex11', 'ex12', ]
     # creator_m(new_exts_2)
+    # basic_file_types = {
+    #     ('vid1', 'vid2', 'vid3', 'vid4',): 3,
+    #     ('txt1', 'txt2', 'txt3', 'txt4',): 3,
+    #     ('doc1', 'doc2', 'doc3', 'doc4',): 3,
+    #     ('img1', 'img2', 'img3', 'img4',): 3,
+    # }
+    # for i_exts in basic_file_types.keys():
+    #     creator_m({i_ext: basic_file_types[i_exts] for i_ext in i_exts})
 
 
 if __name__ == '__main__':
