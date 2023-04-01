@@ -3,7 +3,6 @@
 # Функция должна извлекать ключи словаря для заголовков столбца из переданного файла.
 import pickle
 import csv
-import json
 
 
 def reader(file_in_path: str) -> list[dict]:
