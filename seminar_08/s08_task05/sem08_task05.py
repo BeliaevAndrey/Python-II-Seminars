@@ -8,7 +8,7 @@ import os
 def searcher(path: str) -> list[list[str]]:
     files_lst = []
     if not os.path.isdir(path):
-        raise IOError("Obtained path is noa a directory")
+        raise IOError("Obtained path is not a directory")
     for path_str in os.walk(path):
         for file_nm in path_str[-1]:
             if file_nm.endswith('.json'):
