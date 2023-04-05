@@ -1,0 +1,140 @@
+[
+    {
+        "args": {},
+        "kwargs": {},
+        "result": "test 0150a string"
+    },
+    {
+        "args": {
+            "arg0": 6,
+            "arg1": "test 02",
+            "arg2": "another string"
+        },
+        "result": "test 0260another string"
+    },
+    {
+        "args": {
+            "arg0": 7,
+            "arg1": "test 03"
+        },
+        "kwargs": {
+            "para3": "yet another one",
+            "para4": 3
+        },
+        "result": "test 0321yet another one"
+    },
+    {
+        "kwargs": {
+            "para1": 8,
+            "para2": "test 04",
+            "para4": -10,
+            "para3": "4"
+        },
+        "result": "test 04-804"
+    },
+    {
+        "args": {
+            "arg0": 5,
+            "arg1": "test 01"
+        },
+        "result": "test 0150a string"
+    },
+    {
+        "args": {
+            "arg0": 6,
+            "arg1": "test 02",
+            "arg2": "another string"
+        },
+        "result": "test 0260another string"
+    },
+    {
+        "args": {
+            "arg0": 7,
+            "arg1": "test 03"
+        },
+        "kwargs": {
+            "para3": "yet another one",
+            "para4": 3
+        },
+        "result": "test 0321yet another one"
+    },
+    {
+        "kwargs": {
+            "para1": 8,
+            "para2": "test 04",
+            "para4": -10,
+            "para3": "4"
+        },
+        "result": "test 04-804"
+    },
+    {
+        "args": {
+            "arg0": 5,
+            "arg1": "test 01"
+        },
+        "result": "test 0150a string"
+    },
+    {
+        "args": {
+            "arg0": 6,
+            "arg1": "test 02",
+            "arg2": "another string"
+        },
+        "result": "test 0260another string"
+    },
+    {
+        "args": {
+            "arg0": 7,
+            "arg1": "test 03"
+        },
+        "kwargs": {
+            "para3": "yet another one",
+            "para4": 3
+        },
+        "result": "test 0321yet another one"
+    },
+    {
+        "kwargs": {
+            "para1": 8,
+            "para2": "test 04",
+            "para4": -10,
+            "para3": "4"
+        },
+        "result": "test 04-804"
+    },
+    {
+        "args": {
+            "arg0": 5,
+            "arg1": "test 01"
+        },
+        "result": "test 0150a string"
+    },
+    {
+        "args": {
+            "arg0": 6,
+            "arg1": "test 02",
+            "arg2": "another string"
+        },
+        "result": "test 0260another string"
+    },
+    {
+        "args": {
+            "arg0": 7,
+            "arg1": "test 03"
+        },
+        "kwargs": {
+            "para3": "yet another one",
+            "para4": 3
+        },
+        "result": "test 0321yet another one"
+    },
+    {
+        "kwargs": {
+            "para1": 8,
+            "para2": "test 04",
+            "para4": -10,
+            "para3": "4"
+        },
+        "result": "test 04-804"
+    }
+]
