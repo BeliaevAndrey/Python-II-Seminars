@@ -21,7 +21,7 @@ def para_checker_dec(func: Callable) -> Callable:
     attempts_amt_lim = [*range(_ATMTS_LO_LIM, _ATMTS_HI_LIM + 1)]
 
     @wraps(func)
-    def wrapper(num_sc, attempts):
+    def wrapper(num_sc, attempts) -> None:
         if num_sc not in range_lim:
             num_sc = randint(_RANGE_LO_LIM, _RANGE_HI_LIM)
         if attempts not in attempts_amt_lim:
