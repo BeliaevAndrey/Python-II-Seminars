@@ -48,7 +48,7 @@ class Generator:
 
 
 def main():
-    factorials = Generator(1, 100, 19)
+    factorials = Generator(0, 81, 20)
     print(factorials)
     for i in factorials:
         print(i)
