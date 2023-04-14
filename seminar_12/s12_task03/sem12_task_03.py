@@ -3,13 +3,31 @@
 # Если переданы два параметра, считаем step=1.
 # Если передан один параметр, также считаем start=1.
 class Generator:
-    def __init__(self, start: int, stop: int, step: int = 1):
-        self.fct_range = [*range(start, stop, step)]
+
+    def __init__(self, *args):
+        start, stop, step = 1, 1, 1
+        match len(args):
+            case 3:
+                start, stop, step = args
+            case 2:
+                start, stop = args
+            case 1:
+                stop = args[0]
+            case 0:
+                raise AttributeError("At least 'stop' value needed")
+            case _:
+                raise AttributeError("Function takes up to 3 parameters: 'start', 'stop', 'step'")
+        if start == stop:
+            self.fct_range = [stop]
+        elif start > stop:
+            raise AttributeError("'start' parameter must be greater than or equal to 'stop' parameter")
+        else:
+            self.fct_range = [*range(start, stop, step)]
 
     @staticmethod
     def calc(limit) -> int:
         if limit < 0:
-            raise ValueError("Incompatible value")
+            raise ValueError(f'Incompatible value (lesser than 0): {limit}')
         if limit in (0, 1):
             return 1
         result = 1
@@ -30,11 +48,11 @@ class Generator:
 
 
 def main():
-    factorials = Generator(5, 10, 2)
+    factorials = Generator(1, 100, 19)
     print(factorials)
     for i in factorials:
         print(i)
-    factorials = Generator(1, 5, 1)
+    factorials = Generator(10, 10)
     print(factorials)
     for i in factorials:
         print(i)
