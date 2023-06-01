@@ -23,9 +23,9 @@ def dir_check(dir_name: str,
 def sorter(path: str):
     os.chdir(path)
     for file in os.listdir():
-        print(file)
+        # print(file)
         if os.path.isfile(file):
-            cur_ext = file.rsplit('.')
+            cur_ext = file.rsplit('.', 1)
             print(cur_ext)
             if len(cur_ext) == 2:
                 cur_ext = cur_ext[1]

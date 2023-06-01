@@ -46,19 +46,20 @@ class Rectangle:
 def main():
     some_rect = Rectangle(10, 20)
     print(f'{some_rect=}')
-    # some_rect.length = 100
-    # some_rect.width = 200
-    # print(f'{some_rect=}')
-    # try:
-    #     some_rect.length = 0
-    # except Exception as exc:
-    #     print(f'\033[31m{exc.__class__.__name__}:{exc}\033[0m')
-    # try:
-    #     some_rect.width = -100
-    # except Exception as exc:
-    #     print(f'\033[31m{exc.__class__.__name__}:{exc}\033[0m')
-    # print(f'{some_rect=}')
+    some_rect.length = 100
+    some_rect.width = 200
+    print(f'{some_rect=}')
+    try:
+        some_rect.length = 0
+    except Exception as exc:
+        print(f'\033[31m{exc.__class__.__name__}:{exc}\033[0m')
+    try:
+        some_rect.width = -100
+    except Exception as exc:
+        print(f'\033[31m{exc.__class__.__name__}:{exc}\033[0m')
+    print(f'{some_rect=}')
     print(some_rect.__slots__)
+    print(some_rect.__dir__())
 
 
 if __name__ == '__main__':

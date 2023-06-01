@@ -13,9 +13,13 @@ from s09t05_decors import para_checker_dec, dump_to_json_dec, calls_amt_dec
 def guess(num_sc, attempts) -> str:
     result = 'Have not result yet'
     while attempts:
+        tmp = ' '
         print(f'left {attempts} attempts.', end=' ')
         attempts -= 1
-        num = int(input('Input a number: '))
+        try:
+            num = int(tmp := input('Input a number: '))
+        except ValueError:
+            num = ord(tmp[0])
         if num == num_sc:
             print(f'Number found: {num}')
             break

@@ -44,6 +44,7 @@ def main():
     rect_a = Rectangle(10, 20)
     rect_b = Rectangle(14, 7)
     rect_c = rect_a + rect_b
+
     print(rect_c)
     print(rect_a)
     print(rect_b)

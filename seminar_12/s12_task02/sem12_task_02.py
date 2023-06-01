@@ -25,12 +25,12 @@ class Factorial:
 
         return self.results
 
-    def __enter__(self, result):
+    def __enter__(self):
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         with open(self.FILE_NAME, 'w', encoding='utf-8') as f_out:
-            json.dump(self.results, f_out)
+            json.dump(str(self.results), f_out)
 
 
 #
@@ -49,8 +49,8 @@ class Factorial:
 
 
 def main():
-    with Factorial as fct:
-        fct(5)(5)
+    with Factorial(3) as fct:
+        fct(5)
 
 
 if __name__ == '__main__':

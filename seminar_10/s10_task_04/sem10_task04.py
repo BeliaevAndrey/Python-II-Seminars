@@ -49,7 +49,7 @@ def main():
     print(f'E-ID: {first.get_e_id()}')
     print(f'ACL:  {first.get_access_level()}')
 
-    second = Employee('John', 'Doe', 'Dawson', 54, 67358)
+    second = Employee('John', 'Doe', 'Dawson', 54, 673758)
     second.birthday()
     print(f'Name: {second.get_full_name()}')
     print(f'age:  {second.get_age()}')

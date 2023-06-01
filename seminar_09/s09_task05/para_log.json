@@ -146,5 +146,12 @@
             "arg1": 5
         },
         "result": "Have not result yet"
+    },
+    {
+        "args": {
+            "arg0": 80,
+            "arg1": 5
+        },
+        "result": "You loose. Right number is 80"
     }
 ]

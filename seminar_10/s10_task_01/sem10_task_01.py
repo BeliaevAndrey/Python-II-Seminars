@@ -5,6 +5,7 @@ from math import pi as PI
 
 
 class Circle:
+
     def __init__(self, radius: float) -> None:
         self.radius = radius
 

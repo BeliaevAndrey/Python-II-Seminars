@@ -27,9 +27,6 @@ def main():
     first.birthday()
     print(first.get_full_name())
     print(f'age 1: {first.get_age()}')
-    print(f'{first._Human__age=}')
-    first.__age += 100
-    print(f'age 2: {first.get_age()}')
 
 
 if __name__ == '__main__':

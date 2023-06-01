@@ -73,6 +73,5 @@ def main():
     print(f'{some_rect=}')
 
 
-
 if __name__ == '__main__':
     main()

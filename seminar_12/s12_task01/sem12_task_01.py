@@ -14,12 +14,13 @@ class Factorial:
             raise ValueError("Incompatible value")
         if limit in (0, 1):
             self.results.append(1)
-        result = 1
-        for i in range(1, limit + 1):
-            result *= i
-            self.results.append(result)
-            if len(self.results) > self.amount:
-                self.results.pop(0)
+        else:
+            result = 1
+            for i in range(1, limit + 1):
+                result *= i
+                self.results.append(result)
+                if len(self.results) > self.amount:
+                    self.results.pop(0)
 
         return self.results
 

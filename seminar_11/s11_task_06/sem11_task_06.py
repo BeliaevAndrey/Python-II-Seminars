@@ -40,12 +40,12 @@ class Rectangle:
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             raise TypeError("Not a 'Rectangle' instance")
-        return self.get_area() is other.get_area()
+        return self.get_area() == other.get_area()
 
     def __ne__(self, other):
         if not isinstance(other, self.__class__):
             raise TypeError("Not a 'Rectangle' instance")
-        return self.get_area() is not other.get_area()
+        return self.get_area() != other.get_area()
 
     def __lt__(self, other):
         if not isinstance(other, self.__class__):
@@ -80,7 +80,7 @@ def main():
     print(f'(rect_a < rect_b)  -> {rect_a < rect_b}')
     print(f'(rect_a >= rect_b) -> {rect_a >= rect_b}')
     print(f'(rect_a <= rect_b) -> {rect_a <= rect_b}')
-    print('-'*80)
+    print('-' * 80)
     rect_c = eval(repr(rect_a))
     print(f'{rect_a=}')
     print(f'{rect_c=}')
