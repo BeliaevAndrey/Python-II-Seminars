@@ -16,12 +16,19 @@ def calc(num):
     if num // 10 > 10:
         return f'Three-digits: {int(str(num)[::-1])}'
     else:
-        return f'Double-digit, {(num % 10) * (num // 10)}'
+        return f'Cross-multiplied digits, {(num % 10) * (num // 10)}'
 
 
 while True:
-    new_num = int(input('Num: '))
-    if new_num > LIMIT:
-        continue
+    new_num = input('Num: ')
+    if new_num == 'q':
+        print('Good-bye')
+        raise SystemExit
+    elif new_num.isdigit():
+        new_num = int(new_num)
+        if new_num > LIMIT:
+            continue
+        else:
+            print(calc(new_num))
     else:
-        print(calc(new_num))
+        print('Try again')

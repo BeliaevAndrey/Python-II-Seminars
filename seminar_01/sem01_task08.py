@@ -9,8 +9,8 @@
 *********
 """
 
-rows = 5    # int(input("Number of rows: "))
+rows = 50  # int(input("Number of rows: "))
 width = rows * 2 + 1
 for i in range(rows):
-    string = ' ' * ((width - (2*i+1)) // 2) + '*' * (2*i+1)
+    string = ' ' * ((width - (2 * i + 1)) // 2) + '*' * (2 * i + 1)
     print(string)
