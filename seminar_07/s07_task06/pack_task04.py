@@ -8,6 +8,7 @@
   количество файлов, по умолчанию 42
 Имя файла и его размер должны быть в рамках переданного диапазона.
 """
+import os
 from random import randint as r_int
 from string import ascii_lowercase as ltr
 
@@ -39,6 +40,9 @@ def creator(ext: str,
         return ''.join([ltr[r_int(0, len(ltr) - 1)] for _ in range(r_int(min_name_len, max_name_len))])
     for _ in range(files_amt):
         file_name = f"{gen_name()}.{ext}"
+        for f_name in os.listdir():
+            if file_name in f_name:
+                file_name = (tmp := file_name.rsplit('.', 1))[0] + '_1.' + tmp[1]
         data = ''.join([ltr[r_int(0, len(ltr)-1)] for _ in range(r_int(min_bytes_amt, max_bytes_amt))])
         with open(file_name, 'wb') as f_out:
             f_out.write(data.encode())

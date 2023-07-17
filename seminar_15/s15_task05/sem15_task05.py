@@ -9,10 +9,15 @@ import argparse
 MONTHS = ["янв", "фев", "мар", "апр", "мая", "июн", "июл", "авг", "сен", "окт", "ноя", "дек",]
 DAYS = ["пон", "вто", "сре", "чет", "пят", "суб", "вос"]
 
+FORMAT = ("{asctime} - {levelname} - "
+          "{name} - {funcName}: {msg}")
+
 logging.basicConfig(
-    filename="data.log",
+    filename="date_parse.log",
+    filemode='w',
     level=logging.ERROR,
     style="{",
+    format=FORMAT,
 )
 logger = logging.getLogger(__name__)
 
@@ -22,8 +27,8 @@ def parse_date(date: str) -> datetime:
     try:
         week_num, day, month = date.split()
         week_num = int(week_num.split("-")[0])
-    except ValueError as e:
-        logger.error("Не смогли распарсить")
+    except ValueError as exc:
+        logger.error(f'Parse ERROR: {exc.__class__.__name__}: {exc}')
         return None
 
     year = datetime.datetime.now().year
@@ -31,13 +36,17 @@ def parse_date(date: str) -> datetime:
     day_num = DAYS.index(day[:3])
 
     counter = 0
-    dat = None
     for i in range(1, 32):
-        dat = datetime.datetime(day=i, month=month_num, year=year)
-        if dat.weekday() == day_num:
-            counter += 1
-            if counter == week_num:
-                return dat
+        try:
+            date_in = datetime.datetime(day=i, month=month_num, year=year)
+            if date_in.weekday() == day_num:
+                counter += 1
+                if counter == week_num:
+                    return date_in
+        except Exception as exc:
+            print(f'\033[31m{exc.__class__.__name__}: {exc}\033[0m')
+            logger.error(f'{exc.__class__.__name__}: {exc}')
+            return
 
 
 def arg_parser():

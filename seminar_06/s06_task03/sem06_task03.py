@@ -7,6 +7,7 @@ from sys import argv
 
 
 def guess(lo: int, hi: int = 100, attempts_amt: int = 3) -> bool:
+    lo, hi = sorted((hi, lo))
     number = r_int(lo, hi)
     count: int = 0
     while count < attempts_amt:
@@ -19,6 +20,7 @@ def guess(lo: int, hi: int = 100, attempts_amt: int = 3) -> bool:
             print("Your number is lesser")
         else:
             print("Your number is greater")
+    print(f'the number was: {number}')
     return False
 
 

@@ -6,3 +6,11 @@
 2023-04-26 16:58:59,648 - INFO - s15_logging_dec - wrapper: function a_function; args: 6,test 02,another string; kwargs: None
 2023-04-26 16:58:59,648 - INFO - s15_logging_dec - wrapper: function a_function; args: 7,test 03; kwargs: para3=yet another one, para4=3
 2023-04-26 16:58:59,648 - INFO - s15_logging_dec - wrapper: function a_function; args: None; kwargs: para1=8, para2=test 04, para4=-10, para3=4
+2023-06-08 21:15:31,696 - INFO - s15_logging_dec - wrapper: function a_function; args: 5,test 01; kwargs: None
+2023-06-08 21:15:31,697 - INFO - s15_logging_dec - wrapper: function a_function; args: 6,test 02,another string; kwargs: None
+2023-06-08 21:15:31,697 - INFO - s15_logging_dec - wrapper: function a_function; args: 7,test 03; kwargs: para3=yet another one, para4=3
+2023-06-08 21:15:31,697 - INFO - s15_logging_dec - wrapper: function a_function; args: None; kwargs: para1=8, para2=test 04, para4=-10, para3=4
+2023-06-08 21:16:42,115 - INFO - s15_logging_dec - wrapper: function a_function; args: 5,test 01; kwargs: None
+2023-06-08 21:16:42,115 - INFO - s15_logging_dec - wrapper: function a_function; args: 6,test 02,another string; kwargs: None
+2023-06-08 21:16:42,115 - INFO - s15_logging_dec - wrapper: function a_function; args: 7,test 03; kwargs: para3=yet another one, para4=3
+2023-06-08 21:16:42,115 - INFO - s15_logging_dec - wrapper: function a_function; args: None; kwargs: para1=8, para2=test 04, para4=-10, para3=4

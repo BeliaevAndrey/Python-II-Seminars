@@ -48,4 +48,7 @@ class TaskFive:
 
 
 if __name__ == '__main__':
-    print('just a module now')
+    # print('just a module now')
+    fun1 = TaskFive('index.json', 5)
+    fun1.entrance(123456, "name 000")
+    print(fun1.get_authorized())

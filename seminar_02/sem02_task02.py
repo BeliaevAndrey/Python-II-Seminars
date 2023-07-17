@@ -7,17 +7,15 @@ data = [
     [],
     {},
     set(),
-    (1,)
+    (1,),
+    False
 ]
 
 for i, var in enumerate(data, start=1):
-    print(f'{i}: {var=} ,{id(var)=}, {sys.getsizeof(var)=}', end=' ')
+    print(f'{i:0>4}: str(var)={str(var):<25} id(var)={id(var):<20} sys.getsizeof(var)={sys.getsizeof(var):<10}', end=' ')
     try:
-        print(f'{hash(var)=}', end=' ')
+        print(f'hash(var)={hash(var):<30}', end=' ')
     except TypeError:
-        print(f'Unhashable', end=' ')
-    if isinstance(var, int):
-        print(f'{type(var)=}', end=' ')
-    elif isinstance(var, str):
-        print(f'{type(var)=}', end=' ')
+        print(f'{"Unhashable":<40}', end=' ')
+    print(f'str(type(var))={str(type(var)):<25}', end=' ')
     print()

@@ -72,6 +72,10 @@ def gen_primes3(amount):
         k += 1
 
 
+def eratosfen(num: int):
+    primes = set()
+
+
 def main():
     limit = int(input('N: '))
     start = time_ns()

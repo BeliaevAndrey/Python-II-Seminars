@@ -13,7 +13,7 @@ def symbol_deleter(in_str: str) -> str:
 
 
 def main():
-    print(symbol_deleter('This text has to saved. А этот текст должен быть удален 1234098765'
+    print(symbol_deleter('This text is to be saved. А этот текст должен быть удален 1234098765'
                          '!"№;%%::?? ** (() ()( *  ?: %: %;;!@#$%^&*(*)_+=}{[]|\\/?.,<>`~'))
 
 

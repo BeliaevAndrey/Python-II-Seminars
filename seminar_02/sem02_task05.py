@@ -8,7 +8,7 @@ def calc_d(a, b, c) -> float:
     return b ** 2 - 4 * a * c
 
 
-def calc_roots(a, b, c, d: float | complex):
+def calc_roots(a, b, c, d: [float, complex]):
     x1 = (-b + d ** 0.5) / (2 * a)
     x2 = (-b - d ** 0.5) / (2 * a)
     return x1, x2

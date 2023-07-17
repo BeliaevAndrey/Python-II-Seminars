@@ -21,10 +21,12 @@ def checker(date_in: str) -> bool:
     """
     if len(date_in := date_in.split('.')) != 3:
         return False
+    if len(date_in[2]) > 4:
+        return False
     date_in = [*map(int, date_in)][::-1]
     if date_in[1] > 31 or (date_in[1] == 2 and
-                           date_in[0] == 29 and
-                           not _leap_year_check(date_in[2])):
+                           date_in[2] == 29 and
+                           not _leap_year_check(date_in[0])):
         return False
     try:
         date(*date_in)

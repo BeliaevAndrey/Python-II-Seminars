@@ -12,7 +12,7 @@ WEEKDAYS_TRANSLATE = {'пон': 'Monday', 'вто': 'Tuesday', 'сре': 'Wednes
 
 
 logging.basicConfig(
-    filename="data.log",
+    filename="date.log",
     level=logging.INFO,
     style="{",
 )

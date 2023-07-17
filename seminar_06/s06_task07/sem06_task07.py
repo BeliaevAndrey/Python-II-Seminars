@@ -8,8 +8,10 @@ from s06_date_check import *
 
 def main():
     print("29.02.1564", checker("29.02.1564"))
+    print("29.02.2000", checker("29.02.2000"))
     print("29.02.1961", checker("29.02.1961"))
-    print("32.12.9999", checker("32.12.9999"))
+    print("31.12.9999", checker("31.12.9999"))
+    print(f"32.12.{(9999 + 1):_d}", checker(f"32.12.{(9999 + 1):_d}"))
     print("31.12.1", checker("31.12.1"))
     print("31.12.-1", checker("31.12.-1"))
     print("12.04.1961", checker("12.04.1961"))

@@ -4,7 +4,7 @@
 # Если число кратно и 3, и 5, то программа должна выводить слово «FizzBuzz».
 # *Превратите решение в генераторное выражение.
 
-gen = ('FizzBuzz' if not i % 15 else 'Buzz' if not i % 5 else 'Fizz' if not i % 3 else i for i in range(1, 100))
+gen = ('FizzBuzz' if not i % 15 else 'Buzz' if not i % 5 else 'Fizz' if not i % 3 else i for i in range(1, 101))
 
 for i in gen:
     print(i)
