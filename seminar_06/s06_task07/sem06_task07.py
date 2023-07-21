@@ -7,16 +7,20 @@ from s06_date_check import *
 
 
 def main():
-    print("29.02.1564", checker("29.02.1564"))
-    print("29.02.2000", checker("29.02.2000"))
-    print("29.02.1961", checker("29.02.1961"))
-    print("31.12.9999", checker("31.12.9999"))
-    print(f"32.12.{(9999 + 1):_d}", checker(f"32.12.{(9999 + 1):_d}"))
-    print("31.12.1", checker("31.12.1"))
-    print("31.12.-1", checker("31.12.-1"))
-    print("12.04.1961", checker("12.04.1961"))
-    print("12/04/1961", checker("12/04/1961"))
-    print("12-04-1961", checker("12-04-1961"))
+    print(date_c := "29.02.1564", checker(date_c))
+    print(date_c := "29.02.2000", checker(date_c))
+    print(date_c := "29.02.1960", checker(date_c))
+    print(date_c := "31.12.9999", checker(date_c))
+    print(date_c := f"31.12.{(9999 + 1):_d}", checker(date_c))
+    print(date_c := "31.12.1", checker(date_c))
+    print(date_c := "31.12.-1", checker(date_c))
+    print(date_c := "12.04.1961", checker(date_c))
+    print(date_c := "12/04/1961", checker(date_c))
+    print(date_c := "12.04.1961", checker(date_c))
+    print(date_c := "32.04.1961", checker(date_c))
+    print(date_c := "12.34.1961", checker(date_c))
+    print(date_c := "31.04.1961", checker(date_c))
+    print(date_c := "30.04.1961", checker(date_c))
 
 
 if __name__ == '__main__':
