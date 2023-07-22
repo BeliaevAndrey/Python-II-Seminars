@@ -5,7 +5,6 @@ _EXCLUDE = 100
 _INCLUDE = 400
 
 
-
 def _leap_year_check(a_year: int) -> bool:
     """leap year check"""
     if a_year % _EXCLUDE == 0 and a_year % _INCLUDE == 0:
