@@ -27,7 +27,7 @@ def main():
     else:
         d: complex = complex(d, 0)
         x1, x2 = calc_roots(a, b, c, d)
-        print(f'roots are: {x1=}; {x2=}')
+        print(f'roots are: {x1=:.2}; {x2=:.2}')
 
 
 if __name__ == '__main__':

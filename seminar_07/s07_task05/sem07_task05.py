@@ -13,15 +13,6 @@ MIN_FILES_AMT = 10
 MAX_FILES_AMT = 42
 
 
-# def creator(ext: str,
-#             min_name_len: int = MIN_NAME_LEN,
-#             max_name_len: int = MAX_NAME_LEN,
-#             min_bytes_amt: int = MIN_BYTES_AMT,
-#             max_bytes_amt: int = MAX_BYTES_AMT,
-#             files_amt: int = FILES_AMT,
-#             ) -> None:
-
-
 def creator_m(extensions: [list[str], dict[str, int]]) -> None:
     if isinstance(extensions, list):
         used_amt = set()

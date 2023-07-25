@@ -24,7 +24,9 @@ def union_func(nums: str, names: str, result: str) -> None:
                     l_name = read_line(f_names)
                     r_num = [*map(float, l_num.split('|'))]
                     r_num = r_num[0] * r_num[1]
-                    res_line = f'{l_name} {r_num}\n'.lower() if r_num < 0 else f'{l_name} {r_num}\n'.upper()
+                    res_line = (f'{l_name} {abs(r_num)}\n'.lower()
+                                if r_num < 0 else
+                                f'{l_name} {int(r_num)}\n'.upper())
                     f_out.write(res_line)
 
 

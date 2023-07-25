@@ -14,3 +14,6 @@ width = rows * 2 + 1
 for i in range(rows):
     string = ' ' * ((width - (2 * i + 1)) // 2) + '*' * (2 * i + 1)
     print(string)
+
+for i in range(rows):
+    print(f'{"*" * (2 * i + 1):^{width}}')
